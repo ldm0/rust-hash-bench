@@ -516,7 +516,7 @@ fn main() {
     let _: &[u8] = BYTES.as_ref();
 
     {
-        const ITER_COUNT: usize = 1_000_000;
+        const ITER_COUNT: usize = 10_000_000;
         const CHUNK_SIZE: usize = 64;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!("\nChunk size: {}b, iter_count: {}", CHUNK_SIZE, ITER_COUNT);
@@ -530,7 +530,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 500_000;
+        const ITER_COUNT: usize = 5_000_000;
         const CHUNK_SIZE: usize = 128;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!("\nChunk size: {}b, iter_count: {}", CHUNK_SIZE, ITER_COUNT);
@@ -544,7 +544,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 250_000;
+        const ITER_COUNT: usize = 2_500_000;
         const CHUNK_SIZE: usize = 256;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!("\nChunk size: {}b, iter_count: {}", CHUNK_SIZE, ITER_COUNT);
@@ -558,7 +558,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 125_000;
+        const ITER_COUNT: usize = 1_250_000;
         const CHUNK_SIZE: usize = 512;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!("\nChunk size: {}b, iter_count: {}", CHUNK_SIZE, ITER_COUNT);
@@ -572,7 +572,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 50_000;
+        const ITER_COUNT: usize = 500_000;
         const CHUNK_SIZE: usize = 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -590,7 +590,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 25_000;
+        const ITER_COUNT: usize = 250_000;
         const CHUNK_SIZE: usize = 2 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -608,7 +608,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 10_000;
+        const ITER_COUNT: usize = 100_000;
         const CHUNK_SIZE: usize = 4 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -626,7 +626,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 5_000;
+        const ITER_COUNT: usize = 50_000;
         const CHUNK_SIZE: usize = 8 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -644,7 +644,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 2_000;
+        const ITER_COUNT: usize = 20_000;
         const CHUNK_SIZE: usize = 16 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -662,7 +662,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 1_000;
+        const ITER_COUNT: usize = 10_000;
         const CHUNK_SIZE: usize = 32 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -680,7 +680,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 500;
+        const ITER_COUNT: usize = 5_000;
         const CHUNK_SIZE: usize = 64 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -698,7 +698,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 250;
+        const ITER_COUNT: usize = 2_500;
         const CHUNK_SIZE: usize = 128 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -716,7 +716,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 100;
+        const ITER_COUNT: usize = 1_000;
         const CHUNK_SIZE: usize = 256 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -734,7 +734,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 100;
+        const ITER_COUNT: usize = 1_000;
         const CHUNK_SIZE: usize = 512 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -752,7 +752,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 100;
+        const ITER_COUNT: usize = 1_000;
         const CHUNK_SIZE: usize = 1 * 1024 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
@@ -770,7 +770,7 @@ fn main() {
     }
 
     {
-        const ITER_COUNT: usize = 100;
+        const ITER_COUNT: usize = 1000;
         const CHUNK_SIZE: usize = 2 * 1024 * 1024;
         let result = test::<ITER_COUNT, CHUNK_SIZE>();
         println!(
