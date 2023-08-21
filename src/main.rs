@@ -16,14 +16,14 @@ fn test<const ITER_COUNT: usize, const CHUNK_SIZE: usize>() -> BTreeMap<&'static
     // blake2
     {
         {
-            let mut x = blake2::Blake2b::new();
+            let mut x = blake2::Blake2b512::new();
             let time = Instant::now();
             for _ in 0..ITER_COUNT {
                 x.update(chunky_data);
             }
             let elapsed = time.elapsed().as_secs_f32();
             hash_info.insert(
-                "blake2::Blake2b",
+                "blake2::Blake2b512",
                 HashInfo {
                     speed: (ITER_COUNT * CHUNK_SIZE) as f32 / elapsed,
                 },
@@ -31,14 +31,14 @@ fn test<const ITER_COUNT: usize, const CHUNK_SIZE: usize>() -> BTreeMap<&'static
         }
 
         {
-            let mut x = blake2::Blake2s::new();
+            let mut x = blake2::Blake2s256::new();
             let time = Instant::now();
             for _ in 0..ITER_COUNT {
                 x.update(chunky_data);
             }
             let elapsed = time.elapsed().as_secs_f32();
             hash_info.insert(
-                "blake2::Blake2s",
+                "blake2::Blake2s256",
                 HashInfo {
                     speed: (ITER_COUNT * CHUNK_SIZE) as f32 / elapsed,
                 },
@@ -127,7 +127,7 @@ fn test<const ITER_COUNT: usize, const CHUNK_SIZE: usize>() -> BTreeMap<&'static
         }
 
         {
-            let mut x = sha2::Sha512Trunc224::new();
+            let mut x = sha2::Sha512_224::new();
             let time = Instant::now();
             for _ in 0..ITER_COUNT {
                 x.update(chunky_data);
@@ -142,7 +142,7 @@ fn test<const ITER_COUNT: usize, const CHUNK_SIZE: usize>() -> BTreeMap<&'static
         }
 
         {
-            let mut x = sha2::Sha512Trunc256::new();
+            let mut x = sha2::Sha512_256::new();
             let time = Instant::now();
             for _ in 0..ITER_COUNT {
                 x.update(chunky_data);
